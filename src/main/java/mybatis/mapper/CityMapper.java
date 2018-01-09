@@ -18,5 +18,7 @@ public interface CityMapper {
 	/**xml 
 	 */
 	City selectCityById(int city_id);
+	
+	int insert(City city);
 
 }

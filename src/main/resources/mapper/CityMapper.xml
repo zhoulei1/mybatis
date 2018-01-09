@@ -6,4 +6,8 @@
     <select id="selectCityById" resultType="City">
         select * from city where id = #{id}
     </select>
+    <insert id="insert" parameterType="City" useGeneratedKeys="true"
+    keyProperty="id">
+    	insert into city (name,state,country) values (#{name},#{state},#{country})
+    </insert>
 </mapper>

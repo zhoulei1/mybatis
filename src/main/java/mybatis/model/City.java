@@ -14,6 +14,15 @@ public class City implements Serializable {
 
 	private String country;
 
+	public City(){}
+	
+	public City(String name, String state, String country) {
+		super();
+		this.name = name;
+		this.state = state;
+		this.country = country;
+	}
+
 	public Long getId() {
 		return this.id;
 	}
