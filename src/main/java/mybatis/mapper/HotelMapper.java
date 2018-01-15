@@ -15,8 +15,6 @@
  */
 package mybatis.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
-
 import mybatis.model.Hotel;
 
 //@Mapper

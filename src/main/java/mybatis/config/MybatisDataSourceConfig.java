@@ -6,6 +6,7 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -33,6 +34,7 @@ public class MybatisDataSourceConfig {
     //事务配置,TransactionAutoConfiguration自动装配事物管理器DataSourceTransactionManager 
     //使用子自定义DataSourceTransactionManager
     @Bean
+    @Primary
     public DataSourceTransactionManager transactionManager(DataSource dataSource){
     	return new DataSourceTransactionManager(dataSource);
     }

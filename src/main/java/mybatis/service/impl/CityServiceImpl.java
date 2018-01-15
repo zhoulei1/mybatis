@@ -17,6 +17,7 @@ public class CityServiceImpl implements CityService {
 	@Override
 	public int add(City city) {
 		int insert = cityMapper.insert(city);
+	//	int i=1/0;
 		return insert;
 	}
 }

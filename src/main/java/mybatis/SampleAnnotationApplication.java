@@ -21,7 +21,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import mybatis.mapper.CityMapper;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class SampleAnnotationApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
