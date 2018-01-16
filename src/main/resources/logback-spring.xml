@@ -15,6 +15,7 @@
 		value="${FILE_LOG_PATTERN:-%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}" />
 
 	<!--读取配置文件的值 -->
+	<springProperty scope="context" name="LOG_HOME" source="log.location" />
 
 	<!--参考文档 https://logback.qos.ch/manual/appenders.html -->
 
