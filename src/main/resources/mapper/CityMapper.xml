@@ -6,8 +6,23 @@
     <select id="selectCityById" resultType="City">
         select * from city where id = #{id}
     </select>
+    <select id="count" resultType="int">
+        select count(*) from city
+    </select>
     <insert id="insert" parameterType="City" useGeneratedKeys="true"
     keyProperty="id">
     	insert into city (name,state,country) values (#{name},#{state},#{country})
     </insert>
+    
+    <insert id="batchinsert" parameterType="java.util.List">  
+    <selectKey resultType ="java.lang.Long" keyProperty= "id" order= "AFTER">  
+        SELECT LAST_INSERT_ID()  
+    </selectKey >  
+    insert into city (name,state,country)  
+    VALUES  
+    <foreach collection="list" item="c" index="index" separator=",">  
+       (#{c.name},#{c.state},#{c.country})  
+    </foreach>  
+    </insert> 
+    
 </mapper>

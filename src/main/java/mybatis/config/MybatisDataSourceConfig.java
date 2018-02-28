@@ -31,8 +31,10 @@ public class MybatisDataSourceConfig {
             throws Exception {
         final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
-        sessionFactory.setTypeAliasesPackage("mybatis.model");
+        //基本配置
         //sessionFactory.setConfigLocation(new PathMatchingResourcePatternResolver().getResource("classpath:mybatis-config.xml"));
+        //设置包别名
+        sessionFactory.setTypeAliasesPackage("mybatis.model");
         sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/*.xml"));
         return sessionFactory.getObject();
     }

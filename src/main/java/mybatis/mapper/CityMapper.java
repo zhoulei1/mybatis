@@ -1,5 +1,7 @@
 package mybatis.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
@@ -19,5 +21,8 @@ public interface CityMapper {
 	City selectCityById(int city_id);
 	
 	int insert(City city);
+	
+	int count();
+	void batchinsert(List<City> list);
 
 }
