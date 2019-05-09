@@ -106,8 +106,8 @@
 
 	<build>
         <finalName>web01</finalName>
-        <resources>
             <!-- 如果不加，那么打包的时候mapper文件不会被加载进来 -->
+<!--         <resources>
             <resource>
                 <directory>src/main/java</directory>
                 <includes>
@@ -117,7 +117,7 @@
                 </includes>
                 <filtering>false</filtering>
             </resource>
-        </resources>
+        </resources> -->
         <!--打包过程中跳过测试-->
         <plugins>
             <plugin>
