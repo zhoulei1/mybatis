@@ -27,7 +27,7 @@ public class MybatisApplicationTests {
 		try {
 			session = sqlSessionFactory.openSession(ExecutorType.BATCH, false);
 			session.insert("insert",new City("ss", "ssss", ""));
-			System.out.println(session.selectOne("count"));
+		//	System.out.println(session.selectOne("count"));
 /*			cityMapper = session.getMapper(CityMapper.class);
 			System.out.println(cityMapper.count());
 			cityMapper.insert(new City("ss", "ssss", ""));
