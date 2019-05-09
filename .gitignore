@@ -1,4 +1,6 @@
 target/
+log/
+.gitignore.bak
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
