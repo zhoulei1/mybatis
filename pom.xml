@@ -105,6 +105,7 @@
 	</dependencies>
 
 	<build>
+        <finalName>web01</finalName>
         <resources>
             <!-- 如果不加，那么打包的时候mapper文件不会被加载进来 -->
             <resource>
@@ -112,6 +113,7 @@
                 <includes>
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>
+                    <include>**/*.sql</include>
                 </includes>
                 <filtering>false</filtering>
             </resource>
@@ -121,7 +123,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.18.1</version>
                 <configuration>
         <!--true跳过测试-->
                     <skipTests>true</skipTests>
@@ -132,6 +133,14 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
         </plugins>
 	</build>
 
